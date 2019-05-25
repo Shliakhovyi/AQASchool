@@ -22,7 +22,7 @@ public class LoginTest extends BrowserFactory {
     @Test
     public void login() {
         loginPage.open();
-        loginPage.login("shliakhovyi.sviatoslav@pdffiller.team", "906578grib");
+        loginPage.login("shliakhovyi.sviatoslav@pdffiller.team", "1qaz@WSX");
         Assert.assertTrue(!driver.findElements(By.cssSelector(".mod-add")).isEmpty(), "Board page not opened");
     }
 
