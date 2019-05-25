@@ -31,8 +31,8 @@ public class CreateDeleteBoardsTest extends BrowserFactory {
         boardsPage.createBoard();
     }
 
-    @Test
-    public void deleteBoard() throws InterruptedException {
+    @Test(dependsOnMethods = { "createBoard"} )
+    public void deleteBoard() {
         existedBoardPage.deleteBoard();
         basePage.backHome();
         driver.navigate().refresh();
